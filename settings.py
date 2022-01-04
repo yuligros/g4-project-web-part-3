@@ -9,8 +9,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DB = {
     'host' : os.environ.get('localhost'),
     'user': os.environ.get('root'),
-    'password': os.environ.get('Y$11Gros'),
-    'database': os.environ.get('sitme')
+    'password': os.environ.get('root'),
+    'database': os.environ.get('group4')
 }
 
 
