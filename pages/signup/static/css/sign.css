@@ -1,29 +1,27 @@
 * {
     box-sizing: border-box;
-    font-family: font1;
+    font-family: 'Martel', serif;
 }
 
-@font-face {
-font-family: font1;
-src: url(AmaticSC-Bold.ttf);
-}
 
-@media only screen and (max-width: 1000px){
-    body{
-        background-color: mistyrose;
-    }
-}
 
 [class*="col-"] {
   float: left;
   padding: 15px;
   /*border: 1px solid red;*/
+
 }
 
 .row::after {
 content: "";
 clear: both;
 display: table;
+}
+
+@media only screen and (max-width: 1000px){
+    body{
+        background-color: mistyrose;
+    }
 }
 
 .col-1 {width: 8.33%;}
@@ -38,13 +36,20 @@ display: table;
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-
 /*---header-----*/
 
 .logo {
     text-align: left;
     width: 50%;
 }
+
+.home_form {
+    border: none;
+    padding-right: 10px;
+    text-align: center;
+    font-size:20px;
+}
+
 
 #login{
     border: none;
@@ -77,7 +82,6 @@ display: table;
     text-align: center;
 }
 
-
 .headerBTN {
     padding:4px;
     font-size:20px;
@@ -87,7 +91,6 @@ display: table;
     border-width: 1px;
     border-style: solid none solid none;
     cursor: pointer;
-
  }
 
  .headerBTN:hover {
@@ -97,33 +100,7 @@ display: table;
     cursor: pointer;
  }
 
- #logo {
-    text-align: left;
-    width: 50%;
-}
-
-
 /*---footer-----*/
-.button1_left {
-    width: 50%;
-    font-size: 20px;
-    color: #f1f1f1;
-    background-color: #9c7c81;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-p{
-    color: dimgray;
-    text-align: left;
-    font-size: 25px;
-}
-
-.button1_left:hover {
-    background-color: #E2DAD5;
-    color: #48422a;
-}
 
 .footer {
     text-align: center;
@@ -183,58 +160,79 @@ display: table;
 
 }
 
-#FootCont {
-    font-size:25px;
+.button1_left {
+    width: 50%;
+    font-size: 20px;
+    color: #f1f1f1;
+    background-color: #9c7c81;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*---sign-----*/
+
+.title1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.labels{
+    font-size: 30px;
+}
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    direction: rtl;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+}
+
+#main_search{
     color: gray;
     text-align: center;
-    font-family: font1;
-    background: #E2DAD5;
-}
-
-#background {
-    background-color: seashell;
+    border: 17px solid #9c7c81;
 }
 
 
-#frame {
-  height: 90vh;
-  width: 100%;
-  background-color: #eee;
-  background-position: center;
-  background-size: cover;
-  animation: image 10s infinite alternate;
+.button1 {
+    width: 60%;
+    font-size: 30px;
+    color: #f1f1f1;
+    background-color: #9c7c81;
+    border: none;
+    cursor: pointer;
 }
 
-@keyframes image {
-  0% {
-    background-image: url('https://images.squarespace-cdn.com/content/v1/53b839afe4b07ea978436183/1608506169128-S6KYNEV61LEP5MS1UIH4/traditional-food-around-the-world-Travlinmad.jpg');
-  }
-  25% {
-    background-image: url('https://grill164.com/wp-content/uploads/2018/03/dan-gold-105699-scaled.jpg');
-  }
-  50% {
-    background-image: url('https://c.stocksy.com/a/1aN400/z9/1043957.jpg');
-  }
-  75% {
-    background-image: url('https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/e/d/p29410-15743151555dd62493bdda1.jpg?tr=tr:n-xlarge');
-  }
-  100% {
-    background-image: url('https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  }
+.button1:hover {
+    background-color: #E2DAD5;
+    color: #48422a;
 }
 
-.About {
-    text-align: center;
-    color: dimgray;
-}
-
-#images {
-    width: 20%;
-    text-align: center;
+.resbar {
+    width: 80%;
+    opacity: 0.5;
 }
 
 .center {
-    text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  opacity: 0.9
 }
 
 .contact {

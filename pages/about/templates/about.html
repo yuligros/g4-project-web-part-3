@@ -7,12 +7,27 @@
 {% endblock %}
 
 {% block page_body_main_content %}
-    <h1>About us</h1>
-    <p>This is an example about us page</p>
+    <div class="col-12 findTable" id = "background">
+        <div class = "col-1"></div>
+             <div class="col-10" class="About">
+                  <h1 class="center" style="color: dimgray;">Our story</h1>
+                       <p >
+                        In SiteMe We love what can happen around the restaurant table, and we are committed to empowering that experience.<br>
+
+                        From helping restaurants of all sizes thrive, to enabling diners to find and book the perfect table for every occasion.<br>
+
+                        Our story is one of human connection—among diners and restaurants, and between restaurants and their communities.<br>
+
+                        We are growing globally like never before, and continuing to lead the conversation in the tech and restaurant spaces with products that anticipate the ever-evolving needs of both restaurants and diners.<br>
+
+                        With our passion for hospitality, we take pride in bringing together people and the restaurants they love in the moments that matter.<br>
+
+                        <h2 class="center" style="color: dimgray;">Pull up a chair and join us</h2>
+                       </p>
+             <div id="frame" class = "col-12"  id="images"></div>
+        </div>
+        <div class = "col-1"></div>
+    </div>
 {% endblock %}
 
-{% block page_body_footer %}{% endblock %}
 
-{% block page_body_js %}
-    <script src="{{ url_for('about.static', filename='js/about.js') }}"></script>
-{% endblock %}

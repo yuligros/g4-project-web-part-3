@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Search Results' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('SearchResults.static', filename='css/SearchResults.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+   <div class="col-12">
+        <div class="col-2">
+            <div id="Left">
+                <label  class="opt">Dining Options</label><br>
+                <input type="radio" id="All" name="Doption">
+                <label for="all">All</label><br>
+                <input type="radio" id="delivery" name="Doption" >
+                <label for="delivery">Delivery Only</label><br>
+                <input type="radio" id="takeOut" name="Doption" >
+                <label for="takeOut">Takeout Only</label><br><br>
+
+                <label class="opt">Seating Options</label><br>
+                <input type="checkbox" id="Bar" name="Soption" >
+                <label for="Bar">Bar</label><br>
+                <input type="checkbox" id="Inside" name="Soption" >
+                <label for="Inside">Inside</label><br>
+                <input type="checkbox" id="Outside" name="Soption" >
+                <label for="Outside">Outside</label><br><br>
+
+                <label  class="opt">Regions</label><br>
+                <input type="checkbox" id="TLV" name="Region" >
+                <label for="TLV">Tel Aviv</label><br>
+                <input type="checkbox" id="BSH" name="Region" >
+                <label for="BSH">Beer Sheva</label><br>
+                <input type="checkbox" id="JLM" name="Region" >
+                <label for="JLM">Jerusalem</label><br>
+                <input type="checkbox" id="HFA" name="Region" >
+                <label for="HFA">Haifa</label><br><br>
+
+                <label class="opt">Cuisine</label><br>
+                <input type="checkbox" id="Italian" name="CSN" >
+                <label for="Italian">Italian</label><br>
+                <input type="checkbox" id="SteakHouse" name="CSN" >
+                <label for="SteakHouse">Steak House</label><br>
+                <input type="checkbox" id="French" name="CSN" >
+                <label for="French">French</label><br>
+                <input type="checkbox" id="Indian" name="CSN" >
+                <label for="Indian">Indian</label><br>
+                <input type="checkbox" id="Mexican" name="CSN" >
+                <label for="Mexican">Mexican</label><br>
+                <input type="checkbox" id="Asian" name="CSN" >
+                <label for="Asian">Asian</label><br><br>
+
+                <label class="opt">Price</label><br>
+                <input type="checkbox" id="30U" name="PRC" >
+                <label for="30U">30 and under</label><br>
+                <input type="checkbox" id="30TWO50" name="PRC" >
+                <label for="30TWO50">30-50</label><br>
+                <input type="checkbox" id="50Plus" name="PRC" >
+                <label for="50Plus">50 and over</label><br><br>
+            </div>
+
+        </div>
+
+        <div class="col-7">
+            <form action="" class="main">
+                <div class="wrap">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Search for a resturant">
+                        <button type="submit" class="searchButton" >
+                            Search
+                        </button>
+                    </div>
+                </div><br>
+
+                <div class="resturant">
+                    <div class="col-3">
+                        <div class="images">
+                            <img src="{{ url_for('SearchResults.static', filename='media/thaihouse.png') }}" >
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text">
+                            <h1>Thai House</h1>
+                            <p>
+                                Asian &#9679 50 and over &#9679 Tel Aviv
+                            </p>
+                            <div class="hours">
+                                <a href="Credit_Card.html">
+                                <button type="button">14:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">15:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">16:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">17:00</button>
+                                 </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">18:00</button>
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="contactPhone">
+                                <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" style="width: 20%;" >
+                                <h4>03-5178568</h4>
+                            </div>
+                            <a href="https://www.thai-house.co.il/" class="website_button">Website</a>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="resturant">
+                    <div class="col-3">
+                        <div class="images">
+                            <img src="{{ url_for('SearchResults.static', filename='media/taizu.png') }}"  alt="Taizu" style="width: 80%;">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text">
+                            <h1>Taizu</h1>
+                            <p>
+                                Asian &#9679 50 and over &#9679 Tel Aviv
+                            </p>
+                            <div class="hours">
+                                <a href="Credit_Card.html">
+                                <button type="button">14:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">15:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">16:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">17:00</button>
+                                 </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">18:00</button>
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="contactPhone">
+                                <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" width="20%" >
+                                <h4>03-5225005</h4>
+                            </div>
+                            <a href="https://www.taizu.co.il/" class="website_button">Website</a>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="resturant">
+                    <div class="col-3">
+                        <div class="images">
+                            <img src="{{ url_for('SearchResults.static', filename='media/Cramim.png') }}" alt="Cramim" style="width: 80%;" >
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text">
+                            <h1>Cramim</h1>
+                            <p>
+                                Steak House &#9679 30-50 &#9679 Beer Sheva
+                            </p>
+                            <div class="hours">
+                                <a href="Credit_Card.html">
+                                <button type="button">14:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">15:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">16:00</button>
+                                </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">17:00</button>
+                                 </a>
+                                <a href="Credit_Card.html">
+                                <button type="button">18:00</button>
+                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="contactPhone">
+                                <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" style="width: 20%;" >
+                                <h4>08-9966444</h4>
+                            </div>
+                            <a href="https://www.cramimrest.co.il/%D7%9B%D7%A8%D7%9E%D7%99%D7%9D-%D7%91%D7%90%D7%A8-%D7%A9%D7%91%D7%A2/" class="website_button">Website</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col-3">
+            <div class="resImg">
+                <img src="{{ url_for('SearchResults.static', filename='media/asian.PNG') }}" style="width: 100%;"><br><br>
+                <img src="{{ url_for('SearchResults.static', filename='media/beit_kandinof.PNG') }}" style="width: 100%;" ><br><br>
+                <img src="{{ url_for('SearchResults.static', filename='media/wine.PNG') }}" style="width: 100%;"><br><br>
+                <img src="{{ url_for('SearchResults.static', filename='media/food.PNG') }}" style="width: 100%;"><br><br>
+                <img src="{{ url_for('SearchResults.static', filename='media/gaia_garden.png') }}" style="width: 100%;"><br>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+
+{% endblock %}

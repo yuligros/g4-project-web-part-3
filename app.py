@@ -14,9 +14,35 @@ app.register_blueprint(homepage)
 from pages.about.about import about
 app.register_blueprint(about)
 
-## Catalog
-from pages.catalog.catalog import catalog
-app.register_blueprint(catalog)
+## Search Results
+from pages.SearchResults.SearchResults import SearchResults
+app.register_blueprint(SearchResults)
+
+## reservations
+from pages.reservations.reservations import reservations
+app.register_blueprint(reservations)
+
+## signin
+from pages.signin.signin import signin
+app.register_blueprint(signin)
+
+## signup
+from pages.signup.signup import signup
+app.register_blueprint(signup)
+
+
+## terms
+from pages.terms.terms import terms
+app.register_blueprint(terms)
+
+## livemap
+from pages.livemap.livemap import livemap
+app.register_blueprint(livemap)
+
+# ## Credit curd
+# from pages.creditcard.credit_card import credit_card
+# app.register_blueprint(credit_card)
+
 
 ## Page error handlers
 from pages.page_error_handlers.page_error_handlers import page_error_handlers

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'reservations' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('reservations.static', filename='css/reservations.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <div class="col-12">
+        <div class="col-3">
+            <div class="resImg">
+                <img src="{{  url_for('reservations.static', filename='media/asian.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/beit_kandinof.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/4.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/14.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/gaia_garden.png') }}"><br><br>
+            </div>
+        </div>
+        <div class="col-6">
+            <form action="" class="main">
+                <div id="MyResHeader">
+                    My Reservations
+                </div>
+                <div class="resturant">
+                    <div class="col-3">
+                        <div class="images">
+                            <img src="{{  url_for('reservations.static', filename='media/thaihouse.png') }}"><br><br>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text">
+                            <h1>Thai House</h1>
+                            <p>
+                                December 19, 2021 at 20:30 &#9679 3 people
+                            </p>
+                            <a href="Credit_Card.html" class="website_button">Book again</a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="contactPhone">
+                                <img src="{{  url_for('reservations.static', filename='media/phone.png.PNG') }}"><br><br>
+                                <h4>03-5178568</h4>
+                            </div>
+                            <a href="https://www.thai-house.co.il/" class="website_button">Website</a>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="resturant">
+                    <div class="col-3">
+                        <div class="images">
+                            <img src="{{  url_for('reservations.static', filename='media/taizu.png') }}"><br><br>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text">
+                            <h1>Taizu</h1>
+                            <p>
+                                January 3, 2022 at 19:00 &#9679 4 people
+                            </p>
+                            <a href="Credit_Card.html" class="website_button">Book again</a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="contactPhone">
+                                <img src="{{  url_for('reservations.static', filename='media/phone.png') }}"><br><br>
+                                <h4>03-5225005</h4>
+                            </div>
+                            <a href="https://www.taizu.co.il/" class="website_button">Website</a>
+                        </div>
+                    </div>
+                </div><br>
+
+                <div class="resturant">
+                    <div class="col-3">
+                        <div class="images">
+                            <img src="{{ url_for('reservations.static', filename='media/Cramim.png') }}"><br><br>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text">
+                            <h1>Cramim</h1>
+                            <p>
+                                December 25, 2021 at 21:00 &#9679 5 people
+                            </p>
+                            <a href="Credit_Card.html" class="website_button">Book again</a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="contact">
+                            <h3>Contact</h3>
+                            <div class="contactPhone">
+                                <img src="{{ url_for('reservations.static', filename='media/phone.png') }}"><br><br>
+                                <h4>08-9966444</h4>
+                            </div>
+                            <a href="https://www.cramimrest.co.il/%D7%9B%D7%A8%D7%9E%D7%99%D7%9D-%D7%91%D7%90%D7%A8-%D7%A9%D7%91%D7%A2/" class="website_button">Website</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-3">
+            <div class="resImg">
+                <img src="{{  url_for('reservations.static', filename='media/food.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/14.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/wine.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/live_map1.PNG') }}"><br><br>
+                <img src="{{  url_for('reservations.static', filename='media/13.png') }}"><br><br>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}

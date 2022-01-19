@@ -1,0 +1,323 @@
+/*---Main-----*/
+* {
+  box-sizing: border-box;
+  font-family: 'Martel', serif;
+}
+
+
+@media only screen and (max-width: 1000px){
+  body{
+      background-color: mistyrose;
+  }
+}
+
+[class*="col-"] {
+float: left;
+padding: 15px;
+/* border: 1px solid red; */
+}
+
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*---header-----*/
+
+#login{
+  border: none;
+  padding-right: 10px;
+  text-align: center;
+  font-size:20px;
+  border-color: #ACACAC;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#login:hover{
+  border: none;
+  font-size:30px;
+  padding-right:4px;
+  border-color: #ACACAC;
+  border-width: 1px;
+  border-style: solid;
+  }
+
+.col-12-bar {
+  width: 100%;
+  background-color: #E2DAD5;
+  text-align: center;
+}
+
+.col-2-bar {
+  width: 16.66%;
+  background-color: #E2DAD5;
+  text-align: center;
+}
+
+
+.headerBTN {
+  padding:4px;
+  font-size:20px;
+  color: gray;
+  background:none;
+  border-color: #ACACAC;
+  border-width: 1px;
+  border-style: solid none solid none;
+  cursor: pointer;
+
+}
+
+.headerBTN:hover {
+  padding:0px;
+  font-size:40px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#logo {
+  text-align: left;
+  width: 50%;
+}
+
+
+/*---footer-----*/
+
+.button1_left {
+  width: 50%;
+  font-size: 20px;
+  color: #f1f1f1;
+  background-color: #9c7c81;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button1_left:hover {
+  background-color: #E2DAD5;
+  color: #48422a;
+}
+
+.footer {
+  text-align: center;
+}
+
+.rowFooter{
+  text-align: center;
+  color: gray;
+}
+
+.rowFooter::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.footerBTN {
+  padding:0px;
+  font-size:25px;
+  color: gray;
+  background:none;
+  border-color: #ACACAC;
+  border-width: 1px;
+  border-style: solid none solid none;
+  cursor: pointer;
+}
+
+.footerBTN:hover {
+  border-color: #E2DAD5;
+  font-size:30px;
+  padding-right:4px;
+}
+
+.footer img{
+  width:30%;
+  text-align: center;
+}
+
+#FootCont {
+  font-size:25px;
+  color: gray;
+  text-align: center;
+  font-family: font1;
+  background: #E2DAD5;
+}
+
+.col-4-footer {
+  width: 33.33%;
+  color: #f1f1f1;
+}
+
+.col-12-footer {
+  width: 100%;
+  background-color: #E2DAD5;
+  color: gray;
+  text-align: center;
+
+}
+
+#FootCont {
+  font-size:25px;
+  color: gray;
+  text-align: center;
+  font-family: font1;
+  background: #E2DAD5;
+}
+
+
+
+.search {
+ width: 50%;
+ position: top;
+ display: flex;
+ text-align: center;
+ margin-right: auto;
+ margin-left: auto;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #9c7c81;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 20px;
+}
+
+.searchTerm:focus{
+  color: #9c7c81;
+}
+
+.searchButton {
+  width: 20%;
+  border: 1px solid #9c7c81;
+  background: #9c7c81;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#Left{
+  color: gray;
+  font-size: 20px;
+  background-color: #f1f1f1;
+}
+
+.opt{
+  font-weight: bold;
+}
+
+.resturant{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main{
+  color: rgb(104, 102, 102);
+}
+
+.contactPhone{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact{
+  text-align: center;
+}
+
+.website_button{
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-decoration: none;
+}
+
+
+
+
+.website_button:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.website_button:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.website_button:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.website_button:focus {
+  outline: 1px transparent;
+}
+
+.website_button:before {
+  display: none;
+}
+
+.website_button:-webkit-details-marker {
+  display: none;
+}
+
+#MyResHeader{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.contact {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+  
