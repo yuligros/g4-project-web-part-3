@@ -9,11 +9,12 @@ create table RESTAURANTS
     website      varchar(255),
     cuisine      varchar(255),
     rating       decimal,
+    img varchar(255),
     constraint Resturant_fk_1
         foreign key (location_ID) references LOCATIONS (location_ID)
 );
 
-INSERT INTO `group4`.`RESTAURANTS` (`restaurants_ID`, `restaurants_name`, `location_ID`, `phone_number`, `website`, `cuisine`, `rating`) VALUES (1, 'Toto', 301, '03-693-5151', 'https://toto-rest.co.il/', 'Italian', 4.3);
+INSERT INTO `group4`.`RESTAURANTS` (`restaurants_ID`, `restaurants_name`, `location_ID`, `phone_number`, `website`, `cuisine`, `rating`, `img`) VALUES (1, 'Toto', 301, '03-693-5151', 'https://toto-rest.co.il/', 'Italian', 4.3,'toto.jpg');
 INSERT INTO `group4`.`RESTAURANTS` (`restaurants_ID`, `restaurants_name`, `location_ID`, `phone_number`, `website`, `cuisine`, `rating`) VALUES (2, 'Thai House', 206, '03-517-8568', 'https://www.thai-house.co.il/', 'Thai', 4.4);
 INSERT INTO `group4`.`RESTAURANTS` (`restaurants_ID`, `restaurants_name`, `location_ID`, `phone_number`, `website`, `cuisine`, `rating`) VALUES (3, 'Bar 51', 208, '03-540-6680', 'https://www.bar51tlv.com/', 'Israeli', 4.2);
 INSERT INTO `group4`.`RESTAURANTS` (`restaurants_ID`, `restaurants_name`, `location_ID`, `phone_number`, `website`, `cuisine`, `rating`) VALUES (4, 'Cramim', 215, '08-996-6444', 'https://www.cramimrest.co.il/', 'European', 4);

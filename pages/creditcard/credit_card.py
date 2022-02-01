@@ -5,7 +5,7 @@ credit_card = Blueprint('credit_card', __name__, static_folder='static', static_
 
 
 # Routes
-@credit_card.route('/credit_card', method='POST')
+@credit_card.route('/credit_card')
 def index():
     return render_template('credit_card.html')
 

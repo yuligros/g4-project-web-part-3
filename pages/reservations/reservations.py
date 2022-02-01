@@ -10,6 +10,3 @@ def res():
     return render_template('reservations.html')
 
 
-
-
-

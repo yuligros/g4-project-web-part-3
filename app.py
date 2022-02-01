@@ -44,9 +44,9 @@ app.register_blueprint(livemap)
 from pages.logout.logout import logout
 app.register_blueprint(logout)
 
-# ## Credit curd
-# from pages.creditcard.credit_card import credit_card
-# app.register_blueprint(credit_card)
+## Credit curd
+from pages.creditcard.credit_card import credit_card
+app.register_blueprint(credit_card)
 
 
 ## Page error handlers
