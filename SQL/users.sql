@@ -5,7 +5,7 @@ create table USERS
         primary key,
     user_email         varchar(255) not null,
     user_phone_number  varchar(255) not null,
-    user_name varchar(255) not null,
+    user_name          varchar(255) not null,
     user_password      varchar(255) not null
 );
 
