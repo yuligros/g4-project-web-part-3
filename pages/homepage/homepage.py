@@ -15,12 +15,7 @@ def index():
         time = request.values.get('time')
         num_people = request.values.get('num_people')
         location = request.values.get('location')
-        free_tables = dbManager.fetch('SELECT l.city,r.restaurants_name,r.rating,r.website,r.phone_number,t.table_ID,t.number_of_diners,t.type FROM tabels as t join restaurants as r on t.restaurants_ID = r.restaurants_ID join locations as l on l.location_ID = r.location_ID where t.number_of_diners >= %s and l.city like %s and t.table_ID not in (select b.table_ID from group4.bookings as b where b.booking_Date = %s and b.booking_Time = %s)',(num_people,location,date,time))
-        print(date)
-        print(time)
-        print(num_people)
-        print(location)
-        print(free_tables)
+        free_tables = dbManager.fetch('SELECT l.city,r.restaurants_name,r.rating,r.website,r.phone_number,r.img,t.table_ID,t.number_of_diners,t.type FROM tabels as t join restaurants as r on t.restaurants_ID = r.restaurants_ID join locations as l on l.location_ID = r.location_ID where t.number_of_diners >= %s and l.city like %s and t.table_ID not in (select b.table_ID from group4.bookings as b where b.booking_Date = %s and b.booking_Time = %s)',(num_people,location,date,time))
         if free_tables:
             return render_template('SearchResults.html',tables = free_tables)
         else:
