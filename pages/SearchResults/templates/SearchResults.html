@@ -87,8 +87,17 @@
 
 
         <div class="col-7">
+            {% if tables%}
+                {% for table in tables %}
+                   <div class="product-info">
+                       <h4>Restaurant = {{table.restaurants_name}} , {{ table.city}} , {{table.website}} , {{table.phone_number}} , {{table.rating}} , {{table.type}}</h4>
+                       <br>
+                   </div>
+                {% endfor %}
+                <h4>{{ tables[0].city }}</h4>
 
 
+            {% endif %}
         </div>
 {#                <div class="resturant">#}
 {#                    <div class="col-3">#}

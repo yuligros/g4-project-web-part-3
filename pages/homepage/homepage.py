@@ -20,7 +20,7 @@ def index():
         print(location)
         print(free_tables)
         if free_tables:
-            return redirect(url_for('SearchResults.index',free_tables = free_tables ))
+            return render_template('SearchResults.html',tables = free_tables)
         else:
             return render_template('SearchResults.html', message="Please accept our apologies, but there are currently no open tables in your search location")
     return render_template('homepage.html')
