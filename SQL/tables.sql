@@ -12,38 +12,85 @@ create table TABELS
 );
 
 
-
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (1, 1, 'Bar', 0, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (2, 2, 'Salon', 1, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (3, 3, 'Terrace', 1, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (4, 4, 'Inside', 1, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (5, 5, 'Smoke Area', 1, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (6, 6, 'Inside', 0, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (7, 7, 'Inside', 1, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (8, 8, 'Inside', 1, 2);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (9, 1, 'Salon', 0, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (10, 2, 'Salon', 1, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (11, 3, 'Terrace', 1, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (12, 4, 'Terrace', 0, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (13, 5, 'Inside', 1, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (14, 6, 'Inside', 1, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (15, 7, 'Smoke Area', 0, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (16, 8, 'Smoke Area', 1, 3);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (17, 1, 'Inside', 1, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (18, 2, 'Inside', 1, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (19, 3, 'Bar', 1, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (20, 4, 'Inside', 0, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (21, 5, 'Terrace', 1, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (22, 6, 'Terrace', 1, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (23, 7, 'Salon', 0, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (24, 8, 'Bar', 1, 4);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (25, 1, 'Salon', 1, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (26, 2, 'Inside', 1, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (27, 3, 'Inside', 1, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (28, 4, 'Inside', 0, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (29, 5, 'Bar', 1, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (30, 6, 'Terrace', 1, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (31, 7, 'Terrace', 0, 5);
-INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (32, 8, 'Salon', 1, 5);
-
-# to add the extra restaurant tables
+INSERT INTO `group4`.`TABELS` (table_ID,number_of_diners,type,status,restaurants_ID)
+VALUES
+    ('1', '1', 'Bar', 0, 1),
+    ('3', '2', 'Salon ', 1, 1),
+    ('5', '3', 'Terrace ', 1, 1),
+    ('7', '4', 'Inside ', 1, 1),
+    ('9', '5', 'Smoke Area ', 0, 1),
+    ('11', '6', 'Inside ', 1, 1),
+    ('13', '7', 'Inside ', 0, 1),
+    ('15', '8', 'Smoke Area ', 1, 1),
+    ('17', '1', 'Bar', 0, 2),
+    ('19', '2', 'Salon ', 1, 2),
+    ('21', '3', 'Terrace ', 1, 2),
+    ('23', '4', 'Inside ', 1, 2),
+    ('25', '5', 'Salon ', 1, 2),
+    ('27', '6', 'Smoke Area ', 1, 2),
+    ('29', '7', 'Salon ', 0, 2),
+    ('31', '8', 'Terrace ', 0, 3),
+    ('33', '1', 'Bar', 0, 3),
+    ('35', '2', 'Salon ', 0, 3),
+    ('37', '3', 'Terrace ', 1, 3),
+    ('39', '4', 'Inside ', 1, 3),
+    ('41', '5', 'Smoke Area ', 1, 3),
+    ('43', '6', 'Inside ', 1, 3),
+    ('45', '7', 'Inside ', 1, 3),
+    ('47', '8', 'Smoke Area ', 1, 3),
+    ('49', '1', 'Bar', 1, 4),
+    ('51', '2', 'Salon ', 0, 4),
+    ('53', '3', 'Terrace ', 0, 4),
+    ('55', '4', 'Inside ', 1, 4),
+    ('57', '5', 'Salon ', 1, 4),
+    ('59', '6', 'Smoke Area ', 1, 4),
+    ('61', '7', 'Salon ', 1, 4),
+    ('63', '8', 'Terrace ', 1, 4),
+    ('65', '1', 'Bar', 1, 5),
+    ('67', '2', 'Salon ', 1, 5),
+    ('69', '3', 'Terrace ', 1, 5),
+    ('71', '4', 'Inside ', 1, 5),
+    ('73', '5', 'Smoke Area ', 1, 5),
+    ('75', '6', 'Inside ', 0, 5),
+    ('77', '7', 'Inside ', 1, 5),
+    ('79', '8', 'Smoke Area ', 0, 5),
+    ('81', '1', 'Bar', 1, 6),
+    ('83', '2', 'Salon ', 1, 6),
+    ('85', '3', 'Terrace ', 1, 6),
+    ('87', '4', 'Inside ', 0, 6),
+    ('89', '5', 'Salon ', 0, 6),
+    ('91', '6', 'Smoke Area ', 1, 6),
+    ('93', '7', 'Salon ', 0, 6),
+    ('95', '8', 'Terrace ', 1, 6),
+    ('97', '1', 'Bar', 0, 7),
+    ('99', '2', 'Salon ', 0, 7),
+    ('101', '3', 'Terrace ', 1, 7),
+    ('103', '4', 'Bar', 1, 7),
+    ('105', '5', 'Smoke Area ', 0, 7),
+    ('107', '6', 'Inside ', 1, 7),
+    ('109', '7', 'Inside ', 1, 7),
+    ('111', '8', 'Smoke Area ', 1, 7),
+    ('113', '1', 'Bar', 1, 8),
+    ('115', '2', 'Salon ', 1, 8),
+    ('117', '3', 'Terrace ', 1, 8),
+    ('119', '4', 'Inside ', 1, 8),
+    ('121', '5', 'Salon ', 1, 8),
+    ('123', '6', 'Smoke Area ', 1, 8),
+    ('125', '7', 'Salon ', 1, 8),
+    ('127', '8', 'Terrace ', 0, 8),
+    ('129', '1', 'Bar', 0, 9),
+    ('131', '2', 'Salon ', 0, 9),
+    ('133', '3', 'Terrace ', 0, 9),
+    ('135', '4', 'Inside ', 1, 9),
+    ('137', '5', 'Salon ', 0, 9),
+    ('139', '6', 'Smoke Area ', 1, 9),
+    ('141', '7', 'Salon ', 0, 9),
+    ('143', '8', 'Terrace ', 1, 9),
+    ('145', '1', 'Bar', 1, 10),
+    ('147', '2', 'Salon ', 1, 10),
+    ('149', '3', 'Terrace ', 1, 10),
+    ('151', '4', 'Inside ', 1, 10),
+    ('153', '5', 'Salon ', 1, 10),
+    ('155', '6', 'Smoke Area ', 1, 10),
+    ('157', '7', 'Salon ', 1, 10),
+    ('159', '8', 'Terrace ', 1, 10);
