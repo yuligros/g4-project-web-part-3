@@ -11,7 +11,7 @@ def index():
     if(session['logged_in']):
         user_id=session['id']
         print(user_id)
-        user_res = dbManager.fetch("select b.user_ID, r.restaurants_name, b.booking_Date, b.booking_Time, b.number_of_diners, r.website, r.phone_number, l.city from bookings as b join tabels as t on b.table_ID = t.table_ID join restaurants as r on t.restaurants_ID = r.restaurants_ID join locations as l on r.location_ID = l.location_ID where b.user_ID =('%s');"%user_id)
+        user_res = dbManager.fetch("select b.user_ID, r.restaurants_name, b.booking_Date, b.booking_Time, b.number_of_diners, r.website, r.phone_number, l.city, r.img from bookings as b join tabels as t on b.table_ID = t.table_ID join restaurants as r on t.restaurants_ID = r.restaurants_ID join locations as l on r.location_ID = l.location_ID where b.user_ID =('%s');"%user_id)
         print(user_res)
         return render_template('reservations.html', reservations = user_res)
     else:

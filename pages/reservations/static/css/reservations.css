@@ -302,9 +302,7 @@ display: table;
   display: none;
 }
 
-.website_button:-webkit-details-marker {
-  display: none;
-}
+
 
 #MyResHeader{
   text-align: center;

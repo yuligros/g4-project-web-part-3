@@ -29,26 +29,36 @@
 <!-------- Search -------->
 <div class="col-12 findTable">
       <form action="" method="post" class="home_form">
-
         <div class="col-3">
             <div class="col-4-location" >
-                 <h3>Top 3 rated restaurants</h3>
-                <a href="" class="footer">
-                    <img class="center" src="static/media/img/map.png" class = "location1">
-                </a>
+                 <h1>Top 3 rated resturants </h1>
+                 {% for res in Top_3_Restaurants %}
+                    <div class="resturant">
+                         <div class="col-7">
+                            <h2>{{ res.restaurants_name }}</h2>
+                            <h3><strong>Rating: {{ res.rating }}</strong></h3>
+                            <a href={{ res.website }} class="website_button">Website</a><br><br>
+                         </div>
+                         <div class="col-5">
+                            <img src="{{  url_for('homepage.static', filename='media/'+res.img ) }}" style="width: 100%;">
+                         </div>
+
+                    </div>
+
+                 {% endfor %}
             </div>
 
-            <div class="col-4-location" >
-                <h3>NEAR YOU</h3>
-                <P><strong>Méli-Mélo</strong><br>Dining Bar - Cocktails</P>
-                <a href="https://www.facebook.com/melimelotlv/">
-                        <img class="center" src="static/media/img/left1.PNG">
-                </a><br><br>
-                <P><strong>Dalida</strong><br>Mediterranean - Chef</P>
-                <a href="https://en.dalidatlv.co.il/">
-                        <img class="center" src="static/media/img/left2.PNG">
-                </a>
-            </div>
+{#            <div class="col-4-location" >#}
+{#                <h3>NEAR YOU</h3>#}
+{#                <P><strong>Méli-Mélo</strong><br>Dining Bar - Cocktails</P>#}
+{#                <a href="https://www.facebook.com/melimelotlv/">#}
+{#                        <img class="center" src="static/media/img/left1.PNG">#}
+{#                </a><br><br>#}
+{#                <P><strong>Dalida</strong><br>Mediterranean - Chef</P>#}
+{#                <a href="https://en.dalidatlv.co.il/">#}
+{#                        <img class="center" src="static/media/img/left2.PNG">#}
+{#                </a>#}
+{#            </div>#}
           </div>
 
           <div class="col-6" id = "main_search">
