@@ -90,7 +90,12 @@
             {% if tables%}
                 {% for table in tables %}
                    <div class="restaurant">
-                       <h3>{{table.restaurants_name}}</h3><h4>City: {{ table.city}} | <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" style="width: 3%;">{{table.phone_number}} | Rate: {{table.rating}} | Table: {{table.type}} | <a href="{{table.website}}">Website</a> | <a href="/credit_card"><button type="submit">Book</button></a></h4>
+                       <h3>{{table.restaurants_name}}</h3><h4>City: {{ table.city}} | <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" style="width: 3%;">{{table.phone_number}} | Rate: {{table.rating}} | Table: {{table.type}} | <a href="{{table.website}}">Website</a></h4>
+                       <form action="/credit_card" method="POST">
+                            <input type="hidden" name="table_ID" value={{ table.table_ID }}>
+                            <input type="hidden" name="number_of_diners" value={{ table.number_of_diners }}>
+                           <a><button type="submit">Book</button></a>
+                       </form>
                    </div>
                 {% endfor %}
             {% endif %}

@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Credit_Card.css">
-    <link rel="stylesheet" href="{{ url_for('SearchResults.static', filename='css/credit_card.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('credit_card.static', filename='css/credit_card.css') }}"/>
 </head>
 <body>
 
@@ -15,7 +14,6 @@
 
         <div class="front">
             <div class="image">
-                <img src="img/chip.png" alt="">
                 <img src="img/visa_mc.png" alt="">
             </div>
             <div class="card-number-box">################</div>
@@ -45,19 +43,19 @@
 
     </div>
 
-    <form action="">
+    <form action="/credit_card" method="post">
         <div class="inputBox">
             <span>card number</span>
-            <input type="text" maxlength="16" class="card-number-input">
+            <input type="text" maxlength="16" class="card-number-input" name="card-number">
         </div>
         <div class="inputBox">
             <span>card holder</span>
-            <input type="text" class="card-holder-input">
+            <input type="text" class="card-holder-input" name="card-holder">
         </div>
         <div class="flexbox">
             <div class="inputBox">
                 <span>expiration mm</span>
-                <select name="" id="" class="month-input">
+                <select name="month" id="" class="month-input">
                     <option value="month" selected disabled>month</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -75,7 +73,7 @@
             </div>
             <div class="inputBox">
                 <span>expiration yy</span>
-                <select name="" id="" class="year-input">
+                <select name="year" id="" class="year-input">
                     <option value="year" selected disabled>year</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
@@ -91,11 +89,12 @@
             </div>
             <div class="inputBox">
                 <span>cvv</span>
-                <input type="text" maxlength="4" class="cvv-input">
+                <input type="text" maxlength="4" class="cvv-input" name="cvv">
             </div>
         </div>
-
-        <input type="submit" value="Save Your Sit!" class="submit-btn"><br>
+        <input type="hidden" name="table_ID" value={{ table_ID }}>
+        <input type="hidden" name="number_of_diners" value={{ number_of_diners }}>
+        <input type="submit" value="Save Your Sit!" class="submit-btn" name="new_booking"><br>
         <br><a href="home1.html">Back home</a>
     </form>
 
