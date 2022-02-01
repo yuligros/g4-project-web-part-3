@@ -52,13 +52,14 @@
           </div>
 
           <div class="col-6" id = "main_search">
+             <form action="/SearchResults" method=["POST"] style="border:none">
                 <h1 >Find your table</h1>
-                <label class="labels" for="date">Date</label><br>
+                <label class="labels" for="date" >Date</label><br>
                 <input type="date" id="date" name="date"><br>
                 <label class="labels" for="time">Time</label><br>
                 <input type="time" id="time" name="time"><br>
                 <label class="labels" for="num_people">Number of people</label><br>
-                <input id = "num_people" type="number" min ="1" max="9" name="number"><br>
+                <input id = "num_people" type="number" min ="1" max="9" name="num_people"><br>
                 <label class="labels" for="location">Location </label>
                 <br>
                 <input list = "location" type="location" name="location"/></label><br><br>
@@ -79,6 +80,7 @@
                 <a href="/SearchResults">
                         <button class="button1" type="button">Find me a SIT</button>
                 </a>
+                 </form>
           </div>
 
           <div class="col-3" >

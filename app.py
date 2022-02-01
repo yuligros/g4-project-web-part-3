@@ -5,6 +5,7 @@ from flask import Flask
 app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 
+
 ###### Pages
 ## Homepage
 from pages.homepage.homepage import homepage
@@ -38,6 +39,10 @@ app.register_blueprint(terms)
 ## livemap
 from pages.livemap.livemap import livemap
 app.register_blueprint(livemap)
+
+## logout
+from pages.logout.logout import logout
+app.register_blueprint(logout)
 
 # ## Credit curd
 # from pages.creditcard.credit_card import credit_card

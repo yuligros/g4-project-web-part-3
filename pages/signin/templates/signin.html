@@ -18,21 +18,31 @@
 
    <div class="col-4" id = "main_search" >
              <div id="info">
-                   <form action="action_page.php" style="border:none">
+
+                  {% if message %}
+                     <div class="message">
+                           {{ message }}
+                     </div>
+                  {% endif %}
+
+                   <form action="/signin" method="POST" style="border:none">
+
                        <h2 class="title1"><strong> Log in</strong></h2>
+
                             <label for="email" class="labels">Email</label><br>
-                            <input type="text" placeholder="Enter email adress" id="email" required><br>
+                            <input type="text" placeholder="Enter email adress" id="email" name="email" required><br>
+
                             <label for="password" class="labels">Password</label><br>
-                            <input type="password" placeholder="Select a password" id="password" required><br>
-                            <label for="name" class="labels">Full name</label><br>
-                            <input type="text" placeholder="Insert your full name" id="name" required><br>
+                            <input type="password" placeholder="Select a password" id="password" name="password" required><br><br><br>
+
                             <div class="clearfix">
                                 <button class="button1" type="submit" class="signupbtn">Log in</button>
                             </div>
                             <br>
+
                             <a href=/signup>
                                  <button class="button1" type="button">Create account</button>
-                            </a>
+                            </a><br><br><br><br><br><br><br>
               </form>
           </div>
       </div>

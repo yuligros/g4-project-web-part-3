@@ -4,6 +4,40 @@
 
 {% block page_head_css %}
     <link rel="stylesheet" href="{{ url_for('livemap.static', filename='css/livemap.css') }}"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default" ></script>
+
+
+<style>
+
+#map {
+  height: 100%;
+}
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+</style>
+
 {% endblock %}
 
 {% block page_body_main_content %}
@@ -12,22 +46,22 @@
             <div class="col-4-location" >
                  <h3>Restaurants based on your current location</h3>
                 <a href="liveMap.html" class="footer">
-                    <img class="center" src="images/map.png" class = "location1">
+                    <img src="{{  url_for('livemap.static', filename='media/map.png') }} " class = "location1" class="center" ><br><br>
                 </a>
             </div>
 
             <div class="col-4-location" >
                 <P><strong>HaTraklin</strong><br>Bistro - Wine</P>
                 <a href="http://www.hatraklin.co.il/">
-                        <img class="center" src="images/20.PNG">
+                    <img src="{{  url_for('livemap.static', filename='media/20.PNG') }} " class = "center"  ><br><br>
                 </a><br>
                 <P><strong>Romano</strong><br>Eyal shani - Chef</P>
                 <a href="https://www.tripadvisor.com/ShowUserReviews-g293984-d8545357-r300514473-Romano-Tel_Aviv_Tel_Aviv_District.html">
-                        <img class="center" src="images/21.PNG">
+                        <img src="{{  url_for('livemap.static', filename='media/21.PNG') }} " class = "center" ><br><br>
                 </a><br>
                 <P><strong>Roku</strong><br>Sushi - Japanese</P>
                 <a href="https://www.sushiroku.com/">
-                        <img class="center" src="images/22.PNG">
+                        <img src="{{  url_for('livemap.static', filename='media/20.PNG') }} " class = "center" ><br><br>
                 </a><br>
             </div>
 </div>
@@ -99,7 +133,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 {% endblock %}
 
 {% block page_body_footer %}{% endblock %}
-
-{% block page_body_js %}
-    <script src="{{ url_for('livemap.static', filename='js/livemap.js') }}"></script>
-{% endblock %}

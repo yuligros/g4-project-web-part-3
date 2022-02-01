@@ -31,20 +31,20 @@ Base page blocks:
     <head>
     {% block page_head %}
         {# Title #}
-        <title>{{ page_head_title_author|default('Barak Pinchovski', true) }} | {{ page_head_title|default('Flask skeleton project', true) }}</title>
+        <title>{{ page_head_title_author|default('SitMe', true) }} | {{ page_head_title|default('', true) }}</title>
 
         {# Meta tags #}
         {% block page_head_meta %}
             <base href="/"/>
             <meta charset="UTF-8"/>
-            <meta name="author" content="Barak Pinchovski"/>
-            <meta name="description" content="Flask skeleton project as a base to start developing on"/>
-            <meta name="keywords" content="flask, lean, skeleton, project, structure, environment, setup, template, fullstack, web, development, app, university, education"/>
+            <meta name="author" content="group4"/>
+            <meta name="description" content="SitMe WebSite"/>
+            <meta name="keywords" content="SitMe, Reservations, Results, food, chef , table"/>
             {% block page_head_meta_extra %}{% endblock %}
         {% endblock %}
 
         {# favicon #}
-        <link rel="icon" href="{{ url_for('static', filename='media/img/favicon/flask-favicon.png') }}"/>
+        <link rel="icon" href="{{ url_for('static', filename='static/media/img/logo.PNG') }}"/>
 
         {# Base #}
         <base href="/"/>
@@ -68,8 +68,7 @@ Base page blocks:
             </a>
         </div>
 
-        <div class="col-1"></div>
-
+       <div class="col-1"></div>
 
         <div class="col-2-bar">
             <a href="/reservations" class="footer">
@@ -89,13 +88,23 @@ Base page blocks:
             </a>
         </div>
 
-        <div class="col-1"></div>
+        <div class="col-3">
 
-        <div class="col-2-bar">
+        {% if session.logged_in %}
+             <a class="headerBTN">Hello {{ session['user_name'].name }}</a><br><br>
+             <a href="/reservations" class="footer">My Reservations</a><br>
+             <a href="/logout">log Out</a>
+
+
+        {% else %}
             <a href="/signin" class="footer">
                 <button class="headerBTN" id="login">Log in</button>
             </a>
+        {% endif %}
+
         </div>
+
+
 </div>
 </header>
 {% endblock %}
