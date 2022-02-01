@@ -12,6 +12,7 @@ create table TABELS
 );
 
 
+
 INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (1, 1, 'Bar', 0, 2);
 INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (2, 2, 'Salon', 1, 2);
 INSERT INTO `group4`.`tabels` (`table_ID`, `number_of_diners`, `type`, `status`, `restaurants_ID`) VALUES (3, 3, 'Terrace', 1, 2);

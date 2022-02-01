@@ -5,7 +5,8 @@ create table BOOKINGS
         primary key,
    user_ID	int not null,
    table_ID int not null,
-   booking_DT datetime not null,
+   booking_Date date not null,
+   booking_Time time not null,
    number_of_diners int not null,
    constraint booking_user_ID_fk
         foreign key (user_ID) references USERS(user_ID),
@@ -13,4 +14,4 @@ create table BOOKINGS
         foreign key (table_ID) references TABELS(table_ID)
 );
 
-INSERT INTO `group4`.`bookings` (`booking_ID`, `user_ID`, `table_ID`, `booking_DT`, `number_of_diners`) VALUES (1, 1, 1, 31/12/2021, 1);
+INSERT INTO `group4`.`bookings` (`booking_ID`, `user_ID`, `table_ID`, `booking_Date`,`booking_Time`, `number_of_diners`) VALUES (1, 1, 1, 31/12/2021, 1);
