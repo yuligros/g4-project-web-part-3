@@ -31,13 +31,14 @@
                     {% for res in reservations %}
                         <div class="resturant">
                             <div class="col-3">
-                                <div class="images">
-
-                                </div>
+{#                                <div class="images">#}
+                                    <img src="{{  url_for('reservations.static', filename='media/'+res.img ) }}" style="width: 80%;">
+{#                                </div>#}
                             </div>
                             <div class="col-6">
                                 <div class="text">
                                     <h1>{{ res.restaurants_name }}</h1>
+                                    <h4>{{ res.city }}</h4>
                                     <p>
                                         {{ res.booking_Date }} at {{ res.booking_Time }} &#9679 {{ res.number_of_diners }} people
                                     </p>
