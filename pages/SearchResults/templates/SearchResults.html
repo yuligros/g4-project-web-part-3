@@ -10,53 +10,58 @@
    <div class="col-12">
         <div class="col-2">
             <div id="Left">
-                <label  class="opt">Dining Options</label><br>
-                <input type="radio" id="All" name="Doption">
-                <label for="all">All</label><br>
-                <input type="radio" id="delivery" name="Doption" >
-                <label for="delivery">Delivery Only</label><br>
-                <input type="radio" id="takeOut" name="Doption" >
-                <label for="takeOut">Takeout Only</label><br><br>
+                <form action="" ">
+                    <label class="opt">Seating Options</label><br>
+                    <input type="radio" id="Bar" name="Soption" >
+                    <label for="Bar">Bar</label><br>
+                    <input type="radio" id="Inside" name="Soption" >
+                    <label for="Inside">Inside</label><br>
+                    <input type="radio" id="Salon" name="Soption" >
+                    <label for="Salon">Salon</label><br>
+                    <input type="radio" id="Smoking_area" name="Soption" >
+                    <label for="Smoking_area">Smoking Area</label><br>
+                    <input type="radio" id="Terrace" name="Soption" >
+                    <label for="Terrace">Terrace</label><br><br>
 
-                <label class="opt">Seating Options</label><br>
-                <input type="checkbox" id="Bar" name="Soption" >
-                <label for="Bar">Bar</label><br>
-                <input type="checkbox" id="Inside" name="Soption" >
-                <label for="Inside">Inside</label><br>
-                <input type="checkbox" id="Outside" name="Soption" >
-                <label for="Outside">Outside</label><br><br>
+                    <label  class="opt">Regions</label><br>
+                    <input type="radio" id="TLV" name="Region" >
+                    <label for="TLV">Tel Aviv</label><br>
+                    <input type="radio" id="BSH" name="Region" >
+                    <label for="BSH">Beer Sheva</label><br>
+                    <input type="radio" id="JLM" name="Region" >
+                    <label for="JLM">Jerusalem</label><br>
+                    <input type="radio" id="HFA" name="Region" >
+                    <label for="HFA">Haifa</label><br><br>
 
-                <label  class="opt">Regions</label><br>
-                <input type="checkbox" id="TLV" name="Region" >
-                <label for="TLV">Tel Aviv</label><br>
-                <input type="checkbox" id="BSH" name="Region" >
-                <label for="BSH">Beer Sheva</label><br>
-                <input type="checkbox" id="JLM" name="Region" >
-                <label for="JLM">Jerusalem</label><br>
-                <input type="checkbox" id="HFA" name="Region" >
-                <label for="HFA">Haifa</label><br><br>
+                    <label class="opt">Cuisine</label><br>
+                    <input type="radio" id="Italian" name="CSN" >
+                    <label for="Italian">Italian</label><br>
+                    <input type="radio" id="European" name="CSN" >
+                    <label for="European">European</label><br>
+                    <input type="radio" id="Fusion" name="CSN" >
+                    <label for="Fusion">Fusion</label><br>
+                    <input type="radio" id="Israeli" name="CSN" >
+                    <label for="Israeli">Israeli</label><br>
+                    <input type="radio" id="Mediterranean" name="CSN" >
+                    <label for="Mediterranean">Mediterranean</label><br>
+                    <input type="radio" id="Middle_Eastern" name="CSN" >
+                    <label for="Middle_Eastern">Middle Eastern</label><br>
+                    <input type="radio" id="Thai" name="CSN" >
+                    <label for="Thai">Thai</label><br>
+                    <input type="radio" id="Asian" name="CSN" >
+                    <label for="Asian">Asian</label><br><br>
 
-                <label class="opt">Cuisine</label><br>
-                <input type="checkbox" id="Italian" name="CSN" >
-                <label for="Italian">Italian</label><br>
-                <input type="checkbox" id="SteakHouse" name="CSN" >
-                <label for="SteakHouse">Steak House</label><br>
-                <input type="checkbox" id="French" name="CSN" >
-                <label for="French">French</label><br>
-                <input type="checkbox" id="Indian" name="CSN" >
-                <label for="Indian">Indian</label><br>
-                <input type="checkbox" id="Mexican" name="CSN" >
-                <label for="Mexican">Mexican</label><br>
-                <input type="checkbox" id="Asian" name="CSN" >
-                <label for="Asian">Asian</label><br><br>
-
-                <label class="opt">Price</label><br>
-                <input type="checkbox" id="30U" name="PRC" >
-                <label for="30U">30 and under</label><br>
-                <input type="checkbox" id="30TWO50" name="PRC" >
-                <label for="30TWO50">30-50</label><br>
-                <input type="checkbox" id="50Plus" name="PRC" >
-                <label for="50Plus">50 and over</label><br><br>
+                    <label class="opt">Rating</label><br>
+                    <input type="radio" id="3.5" name="RTG" >
+                    <label for="3.5">3.5 and over</label><br>
+                    <input type="radio" id="4.0" name="RTG" >
+                    <label for="4.0">4.0 and over</label><br>
+                    <input type="radio" id="4.5" name="RTG" >
+                    <label for="4.5">4.5 and over</label><br><br>
+                    <a>
+                        <button class="website_button" id="FilterBTN" type="submit" >Filter results</button>
+                    </a>
+                </form>
             </div>
         </div>
         <div class="col-7">
@@ -68,43 +73,40 @@
                             Search
                         </button>
                     </div>
-                </div>
-           </form>
-           {% if message %}
-              <div class="message">
-                  {{ message }}
-              </div>
-              <br><br><br>
-              <div class="col-1"></div>
-              <a href=/>
-                <button class="button1" type="button" >Return to the main search page</button>
-              </a>
-              <div class="col-1"></div>
-           {% endif %}
-        </div>
-        <div class="col-7">
-            <form action="" class="main">
+                </div><br>
+                {% if message %}
+                      <div class="message">
+                          {{ message }}
+                      </div>
+                      <br><br><br>
+                      <div class="col-1"></div>
+                      <a href=/>
+                        <button class="button1" type="button" >Return to the main search page</button>
+                      </a>
+                      <div class="col-1"></div>
+                {% endif %}
                 {% if tables%}
                     {% for table in tables %}
-                       <div class="restaurant">
+                       <div class="resturant">
                            <div class="col-3">
-                               <img src="{{  url_for('SearchResults.static', filename='media/'+table.img ) }}" style="width: 70%;">
+                               <div class="images">
+                                   <img src="{{  url_for('SearchResults.static', filename='media/'+table.img ) }}" style="width: 60%;">
+                               </div>
                            </div>
                            <div class="col-6">
                                <div class="text">
                                    <h1>{{table.restaurants_name}}</h1>
-                                   <h4>City: {{ table.city}}</h4>
                                    <p>
-                                       Rate: {{table.rating}} | Table: {{table.type}}
+                                      City: {{ table.city}} &#9679 Rate: {{table.rating}} &#9679 Table: {{table.type}}
                                    </p>
                                    <form action="/credit_card" method="POST">
                                         <input type="hidden" name="table_ID" value={{ table.table_ID }}>
                                         <input type="hidden" name="number_of_diners" value={{ table.number_of_diners }}>
                                         <a><button type="submit">Book</button></a>
-                                    </form>
+                                   </form>
                                </div>
                            </div>
-                           <div class="col-2">
+                           <div class="col-3">
                                 <div class="contact">
                                     <h3>Contact</h3>
                                     <div class="contactPhone">
@@ -114,143 +116,11 @@
                                     <a href={{ table.website }} class="website_button">Website</a>
                                 </div>
                             </div>
-                           <br><br>
-                       </div>
+                       </div><br><br>
                     {% endfor %}
                 {% endif %}
             </form>
         </div>
-{#                <div class="resturant">#}
-{#                    <div class="col-3">#}
-{#                        <div class="images">#}
-{#                            <img src="{{ url_for('SearchResults.static', filename='media/thaihouse.png') }}" >#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-6">#}
-{#                        <div class="text">#}
-{#                            <h1>Thai House</h1>#}
-{#                            <p>#}
-{#                                Asian &#9679 50 and over &#9679 Tel Aviv#}
-{#                            </p>#}
-{#                            <div class="hours">#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">14:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">15:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">16:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">17:00</button>#}
-{#                                 </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">18:00</button>#}
-{#                                 </a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-3">#}
-{#                        <div class="contact">#}
-{#                            <h3>Contact</h3>#}
-{#                            <div class="contactPhone">#}
-{#                                <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" style="width: 20%;" >#}
-{#                                <h4>03-5178568</h4>#}
-{#                            </div>#}
-{#                            <a href="https://www.thai-house.co.il/" class="website_button">Website</a>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div><br>#}
-{##}
-{#                <div class="resturant">#}
-{#                    <div class="col-3">#}
-{#                        <div class="images">#}
-{#                            <img src="{{ url_for('SearchResults.static', filename='media/taizu.png') }}"  alt="Taizu" style="width: 80%;">#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-6">#}
-{#                        <div class="text">#}
-{#                            <h1>Taizu</h1>#}
-{#                            <p>#}
-{#                                Asian &#9679 50 and over &#9679 Tel Aviv#}
-{#                            </p>#}
-{#                            <div class="hours">#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">14:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">15:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">16:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">17:00</button>#}
-{#                                 </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">18:00</button>#}
-{#                                 </a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-3">#}
-{#                        <div class="contact">#}
-{#                            <h3>Contact</h3>#}
-{#                            <div class="contactPhone">#}
-{#                                <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" width="20%" >#}
-{#                                <h4>03-5225005</h4>#}
-{#                            </div>#}
-{#                            <a href="https://www.taizu.co.il/" class="website_button">Website</a>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div><br>#}
-{##}
-{#                <div class="resturant">#}
-{#                    <div class="col-3">#}
-{#                        <div class="images">#}
-{#                            <img src="{{ url_for('SearchResults.static', filename='media/Cramim.png') }}" alt="Cramim" style="width: 80%;" >#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-6">#}
-{#                        <div class="text">#}
-{#                            <h1>Cramim</h1>#}
-{#                            <p>#}
-{#                                Steak House &#9679 30-50 &#9679 Beer Sheva#}
-{#                            </p>#}
-{#                            <div class="hours">#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">14:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">15:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">16:00</button>#}
-{#                                </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">17:00</button>#}
-{#                                 </a>#}
-{#                                <a href="Credit_Card.html">#}
-{#                                <button type="button">18:00</button>#}
-{#                                 </a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="col-3">#}
-{#                        <div class="contact">#}
-{#                            <h3>Contact</h3>#}
-{#                            <div class="contactPhone">#}
-{#                                <img src="{{ url_for('SearchResults.static', filename='media/phone.png') }}" alt="phone" style="width: 20%;" >#}
-{#                                <h4>08-9966444</h4>#}
-{#                            </div>#}
-{#                            <a href="https://www.cramimrest.co.il/%D7%9B%D7%A8%D7%9E%D7%99%D7%9D-%D7%91%D7%90%D7%A8-%D7%A9%D7%91%D7%A2/" class="website_button">Website</a>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </form>#}
-{##}
-{#        </div>#}
         <div class="col-3">
             <div class="resImg">
                 <img src="{{ url_for('SearchResults.static', filename='media/asian.PNG') }}" style="width: 100%;"><br><br>
@@ -262,11 +132,8 @@
         </div>
    </div>
 
-
 {% endblock %}
 
 {% block page_body_footer %}{% endblock %}
 
-{% block page_body_js %}
 
-{% endblock %}

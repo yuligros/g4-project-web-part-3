@@ -229,6 +229,7 @@ display: table;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(104, 102, 102);
 }
 
 .main{

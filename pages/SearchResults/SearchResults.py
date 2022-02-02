@@ -5,6 +5,7 @@ SearchResults = Blueprint('SearchResults', __name__, static_folder='static', sta
 
 
 # Routes
-@SearchResults.route('/SearchResults')
+@SearchResults.route('/SearchResults', methods=['GET', 'POST'])
 def index():
+
     return render_template('SearchResults.html')
