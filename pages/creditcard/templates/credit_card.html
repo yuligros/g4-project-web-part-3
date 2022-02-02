@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('credit_card.static', filename='css/credit_card.css') }}"/>
+
 </head>
 <body>
 
@@ -14,7 +15,7 @@
 
         <div class="front">
             <div class="image">
-                <img src="img/visa_mc.png" alt="">
+                <img src="{{  url_for('credit_card.static', filename='media/credit_card.jpeg') }} "><br><br>
             </div>
             <div class="card-number-box">################</div>
             <div class="flexbox">
@@ -99,17 +100,6 @@
     </form>
 
 </div>
-
-
-
-
-
-
-<script src = "Credit_Card.js"></script>
-
-
-
-
-
+<link rel="stylesheet" href="{{ url_for('credit_card.static', filename='js/credit_card.js') }}"/>
 </body>
 </html>
