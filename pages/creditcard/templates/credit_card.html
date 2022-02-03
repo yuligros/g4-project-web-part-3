@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('credit_card.static', filename='css/credit_card.css') }}"/>
 
+    <link rel="stylesheet" href="{{ url_for('credit_card.static', filename='css/credit_card.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('credit_card.static', filename='css/credit_card.js') }}"/>
 </head>
 <body>
 
@@ -38,21 +39,23 @@
             <div class="box">
                 <span>cvv</span>
                 <div class="cvv-box"></div>
-                <img src="img/visa_mc.png" alt="">
             </div>
         </div>
 
     </div>
 
-    <form action="/credit_card" method="post">
+    <form action="/">
+
         <div class="inputBox">
             <span>card number</span>
             <input type="text" maxlength="16" class="card-number-input" name="card-number">
         </div>
+
         <div class="inputBox">
             <span>card holder</span>
             <input type="text" class="card-holder-input" name="card-holder">
         </div>
+
         <div class="flexbox">
             <div class="inputBox">
                 <span>expiration mm</span>
@@ -72,6 +75,8 @@
                     <option value="12">12</option>
                 </select>
             </div>
+
+
             <div class="inputBox">
                 <span>expiration yy</span>
                 <select name="year" id="" class="year-input">
@@ -88,15 +93,17 @@
                     <option value="2030">2030</option>
                 </select>
             </div>
+
             <div class="inputBox">
                 <span>cvv</span>
                 <input type="text" maxlength="4" class="cvv-input" name="cvv">
             </div>
+
         </div>
         <input type="hidden" name="table_ID" value={{ table_ID }}>
-        <input type="hidden" name="number_of_diners" value={{ number_of_diners }}>
-        <input type="submit" value="Save Your Sit!" class="submit-btn" name="new_booking"><br>
-        <br><a href="home1.html">Back home</a>
+        <input type="hidden" name="number_of_diners" value={{ number_of_diners }}><br>
+        <input type="submit" value="Save Your Sit!" class="submit-btn" name="submit_order"></a>
+        <br><a href="/">Back home</a>
     </form>
 
 </div>

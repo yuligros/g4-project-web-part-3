@@ -51,6 +51,7 @@ Base page blocks:
 
         {# CSS #}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+        <link src="{{ url_for('static', filename='js/base.js') }}"/>
         {% block page_head_css %}{% endblock %}
     {% endblock %}
     </head>
@@ -92,8 +93,7 @@ Base page blocks:
 
         {% if session.logged_in %}
              <a class="headerBTN">Hello {{ session['user_name'].name }}</a><br><br>
-             <a href="/reservations" class="footer">My Reservations</a><br>
-             <a href="/logout">log Out</a>
+             <a class="headerBTN" href="/logout">log Out</a>
 
 
         {% else %}
@@ -173,8 +173,7 @@ Base page blocks:
 
 {% endblock %}
 
-{# JS #}
-<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+
 {% block page_body_js %}{% endblock %}
 </body>
 </html>

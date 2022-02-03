@@ -4,12 +4,13 @@
 
 {% block page_head_css %}
     <link rel="stylesheet" href="{{ url_for('signup.static', filename='css/sign.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('signup.static', filename='js/signup.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('signup.static', filename='js/signup.js') }}"/>
 
 {% endblock %}
 
 {% block page_body_main_content %}
    <div class="col-12 findTable">
+
         <div class="col-4">
                 <img  src="{{ url_for('signup.static', filename='media/beit_kandinof.PNG') }}" class="center" ><br>
                 <img src="{{ url_for('signup.static', filename='media/wine.PNG') }}" class="center" ><br>
@@ -17,15 +18,16 @@
                 <img src="{{ url_for('signup.static', filename='media/left1.PNG') }}" class="center"><br>
 
         </div>
-          <div class="col-4" id = "main_search">
-             <div class="info">
+
+        <div class="col-4" id = "main_search">
+
                    <form action="/signup" method="POST" style="border:none" id = "form">
 
                             <h2 class="title1">Join SitMe</h2>
 
                             <label for="email" class="labels">Email</label>
                             <br>
-                            <input type="email" placeholder="Select email address" id="email" name="email" required>
+                            <input type="email" placeholder="your email address" id="email" name="email" required>
                             <br>
 
                             <label for="password" class="labels">Password</label>
@@ -58,7 +60,6 @@
             </form>
         </div>
 
-      </div>
 
           <div class="col-4" id = right_photos>
                 <img src="{{ url_for('signup.static', filename='media/beit_kandinof.PNG') }}" class="center" ><br>
@@ -66,13 +67,7 @@
                 <img src="{{ url_for('signup.static', filename='media/food.PNG') }}" class="center" ><br>
                 <img src="{{ url_for('signup.static', filename='media/left1.PNG') }}" class="center"><br>
           </div>
-
-          </div>
-
-
-      </form>
    </div>
 
 {% endblock %}
-
 {% block page_body_footer %}{% endblock %}

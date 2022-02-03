@@ -9,6 +9,10 @@ homepage = Blueprint('homepage', __name__, static_folder='static', static_url_pa
 @homepage.route('/', methods=['GET', 'POST'])
 def index():
     Top_3_Restaurants = dbManager.fetch('SELECT r.restaurants_name,r.rating,r.phone_number,r.img, r.website FROM restaurants as r order by rating desc limit 3')
+
+    if request.values.get('submit_order'):
+        return render_template('homepage.html', Top_3_Restaurants = Top_3_Restaurants, message = 'We have successfully saved your order, the restaurant is waiting to serve you')
+
     if request.method == 'POST':
         date = request.values.get('date')
         time = request.values.get('time')

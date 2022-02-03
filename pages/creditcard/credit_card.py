@@ -3,6 +3,7 @@ from utilities.db.db_manager import dbManager
 import datetime
 import time
 from datetime import date
+
 # creditcard  blueprint definition
 credit_card = Blueprint('credit_card', __name__, static_folder='static', static_url_path='/credit_card', template_folder='templates')
 
@@ -21,8 +22,7 @@ def index():
               booking_ID = booking_num[0].num + 2
               new_booking = dbManager.commit('INSERT INTO bookings VALUES(%s,%s,%s,%s,%s,%s)',
                                               (booking_ID,user_id, table_ID , date_toDay,time_toDay,number_of_diners))
-
-              return render_template('credit_card.html', message = "Your booking has been completed. The restaurant is looking forward to having you")
+              return render_template('credit_card.html')
     return render_template('credit_card.html')
 
 

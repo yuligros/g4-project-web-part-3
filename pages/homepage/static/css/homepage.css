@@ -315,3 +315,10 @@ display: table;
     color: black;
 
 }
+
+.message_final_order {
+    color: #9c7c81;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #9c7c81;
+}
