@@ -11,6 +11,7 @@
         <div class="col-2">
             <div id="Left">
                 <form action="/SearchResults" method="post">
+                    <h2>Filter Results</h2>
                     <label class="opt" for="seating_opt">Seating Options</label><br>
                     <input list="seating_opt" name="seating_opt"><br><br>
                     <datalist id="seating_opt">
@@ -50,18 +51,6 @@
         </div>
 
         <div class="col-7">
-
-{#            <form action="" class="main">#}
-{#                <div class="wrap">#}
-{#                    <div class="search">#}
-{#                        <input type="text" class="searchTerm" placeholder="Search for a restaurant">#}
-{#                        <button type="submit" class="searchButton">#}
-{#                            Search#}
-{#                        </button>#}
-{#                    </div>#}
-{#                </div><br>#}
-{#            </form>#}
-
             {% if message %}
                       <div class="message">
                           {{ message }}
