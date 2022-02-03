@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {# META #}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{{ url_for('credit_card.static', filename='js/credit_card.js') }}"></script>
+
+     {# CSS #}
     <link rel="stylesheet" href="{{ url_for('credit_card.static', filename='css/credit_card.css') }}"/>
 </head>
-<body>
 
+
+<body>
 <div class="container">
     <h1 id = "header">To reserve a sit, please enter your credit card information</h1><br>
+
     <div class="card-container">
 
         <div class="front">
@@ -97,17 +101,16 @@
                 <span>cvv</span>
                 <input type="text" maxlength="4" class="cvv-input" name="cvv">
             </div>
-
         </div>
-        <input type="hidden" name="table_ID" value={{ table_ID }}>
-        <input type="hidden" name="number_of_diners" value={{ number_of_diners }}><br>
+
+
         <input type="submit" value="Save Your Sit!" class="submit-btn" name="submit_order"></a>
         <br><a href="/">Back home</a>
     </form>
 
 </div>
 
-<script src = "/pages/credit_card/static/js/credit_card.js"></script>
+<script src="{{ url_for('credit_card.static', filename='js/credit_card.js') }}"></script>
 
 </body>
 </html>
