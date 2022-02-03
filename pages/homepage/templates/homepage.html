@@ -6,25 +6,26 @@
 {% block page_head_css %}
     <script src="{{ url_for('homepage.static', filename='js/homepage.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('homepage.static', filename='css/homepage.css') }}">
-
-    <!-------- geolocation -------->
-     <script>
-         const successCallback = (position) => {
-            console.log(position);
-         };
-         const errorCallback= (error) => {
-           console.log(error);
-         };
-         navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-         enableHighAccuracy: true
-     });
-
-     </script>
 {% endblock %}
 
 
 
 {% block page_body_main_content %}
+
+<!-------- geolocation -------->
+<script>
+     const successCallback = (position) => {
+       console.log(position);
+     };
+     const errorCallback= (error) => {
+       console.log(error);
+     };
+     navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+      enableHighAccuracy: true
+     });
+
+</script>
+
 
 <!-------- Search -------->
 <div class="col-12 findTable">

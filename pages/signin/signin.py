@@ -8,7 +8,7 @@ signin = Blueprint('signin', __name__, static_folder='static', static_url_path='
 # Routes
 @signin.route('/signin', methods=['GET', 'POST'])
 def index():
-
+    session['logged_in'] = False
     if request.method == 'POST':
         email = request.values.get('email')
         password = request.values.get('password')

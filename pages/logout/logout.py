@@ -10,6 +10,6 @@ logout = Blueprint('logout',
 # Routes
 @logout.route('/logout')
 def index():
-    session.clear()
+    session['logged_in'] = False
     return redirect(url_for('homepage.index'))
 
