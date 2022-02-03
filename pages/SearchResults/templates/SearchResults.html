@@ -15,20 +15,12 @@
                     <input list="seating_opt" name="seating_opt"><br><br>
                     <datalist id="seating_opt">
                         <option value="Bar"></option>
-                        <option value="Inside"></option>
-                        <option value="Salon"></option>
-                        <option value="Smoking Area"></option>
-                        <option value="Terrace"></option>
+                        <option value="Inside "></option>
+                        <option value="Salon "></option>
+                        <option value="Smoke Area "></option>
+                        <option value="Terrace "></option>
                     </datalist>
 
-                    <label  class="opt" for="regions">Regions</label><br>
-                    <input list="regions" name="regions"><br><br>
-                    <datalist id="regions">
-                        <option value="Tel Aviv"></option>
-                        <option value="Beer Sheva"></option>
-                        <option value="Jerusalem"></option>
-                        <option value="Haifa"></option>
-                    </datalist>
 
                     <label class="opt" for="cuisine">Cuisine</label><br>
                     <input list="cuisine" name="cuisine"><br><br>
@@ -50,56 +42,18 @@
                         <option value="4.0"></option>
                         <option value="4.5"></option>
                     </datalist>
-
-                    <input type="hidden" name="tables" value={{ tables }}>
-                    <a>
-                        <button class="website_button" id="FilterBTN" type="submit" >Filter results</button>
-                    </a>
-{#                    <input type="radio" id="Bar" name="Soption" >#}
-{#                    <label for="Bar">Bar</label><br>#}
-{#                    <input type="radio" id="Inside" name="Soption" >#}
-{#                    <label for="Inside">Inside</label><br>#}
-{#                    <input type="radio" id="Salon" name="Soption" >#}
-{#                    <label for="Salon">Salon</label><br>#}
-{#                    <input type="radio" id="Smoking_area" name="Soption" >#}
-{#                    <label for="Smoking_area">Smoking Area</label><br>#}
-{#                    <input type="radio" id="Terrace" name="Soption" >#}
-{#                    <label for="Terrace">Terrace</label><br><br>#}
-{#                    <input type="radio" id="TLV" name="Region" >#}
-{#                    <label for="TLV">Tel Aviv</label><br>#}
-{#                    <input type="radio" id="BSH" name="Region" >#}
-{#                    <label for="BSH">Beer Sheva</label><br>#}
-{#                    <input type="radio" id="JLM" name="Region" >#}
-{#                    <label for="JLM">Jerusalem</label><br>#}
-{#                    <input type="radio" id="HFA" name="Region" >#}
-{#                    <label for="HFA">Haifa</label><br><br>#}
-{#                    <input type="radio" id="Italian" name="CSN" >#}
-{#                    <label for="Italian">Italian</label><br>#}
-{#                    <input type="radio" id="European" name="CSN" >#}
-{#                    <label for="European">European</label><br>#}
-{#                    <input type="radio" id="Fusion" name="CSN" >#}
-{#                    <label for="Fusion">Fusion</label><br>#}
-{#                    <input type="radio" id="Israeli" name="CSN" >#}
-{#                    <label for="Israeli">Israeli</label><br>#}
-{#                    <input type="radio" id="Mediterranean" name="CSN" >#}
-{#                    <label for="Mediterranean">Mediterranean</label><br>#}
-{#                    <input type="radio" id="Middle_Eastern" name="CSN" >#}
-{#                    <label for="Middle_Eastern">Middle Eastern</label><br>#}
-{#                    <input type="radio" id="Thai" name="CSN" >#}
-{#                    <label for="Thai">Thai</label><br>#}
-{#                    <input type="radio" id="Asian" name="CSN" >#}
-{#                    <label for="Asian">Asian</label><br><br>#}
-{#                    <input type="radio" id="3.5" name="RTG" >#}
-{#                    <label for="3.5">3.5 and over</label><br>#}
-{#                    <input type="radio" id="4.0" name="RTG" >#}
-{#                    <label for="4.0">4.0 and over</label><br>#}
-{#                    <input type="radio" id="4.5" name="RTG" >#}
-{#                    <label for="4.5">4.5 and over</label><br><br>#}
+                       <a>
+                           <button class="website_button" id="FilterBTN" type="submit" >Filter results</button>
+                       </a>
                 </form>
             </div>
         </div>
 
         <div class="col-7">
+
+            {% if tables_after_filters %}
+
+            {% endif %}
 
             <form action="" class="main">
                 <div class="wrap">
@@ -121,9 +75,11 @@
                       <a href="/"> <button class="button1" type="button" >Return to the main search page</button></a>
                       <div class="col-1"></div>
             {% endif %}
+
+
             {% if tables%}
                     {% for table in tables %}
-
+                        <div class="resturant">
                            <div class="col-3">
                                <div class="images">
                                    <img src="{{  url_for('SearchResults.static', filename='media/'+table.img ) }}" style="width: 60%;">
@@ -154,7 +110,7 @@
                                     <a href={{ table.website }} class="website_button">Website</a>
                                 </div>
                             </div><br><br>
-
+                        </div>
                     {% endfor %}
             {% endif %}
 
