@@ -11,57 +11,90 @@
         <div class="col-2">
             <div id="Left">
                 <form action="/SearchResults" method="post">
-                    <label class="opt">Seating Options</label><br>
-                    <input type="radio" id="Bar" name="Soption" >
-                    <label for="Bar">Bar</label><br>
-                    <input type="radio" id="Inside" name="Soption" >
-                    <label for="Inside">Inside</label><br>
-                    <input type="radio" id="Salon" name="Soption" >
-                    <label for="Salon">Salon</label><br>
-                    <input type="radio" id="Smoking_area" name="Soption" >
-                    <label for="Smoking_area">Smoking Area</label><br>
-                    <input type="radio" id="Terrace" name="Soption" >
-                    <label for="Terrace">Terrace</label><br><br>
+                    <label class="opt" for="seating_opt">Seating Options</label><br>
+                    <input list="seating_opt" name="seating_opt"><br><br>
+                    <datalist id="seating_opt">
+                        <option value="Bar"></option>
+                        <option value="Inside"></option>
+                        <option value="Salon"></option>
+                        <option value="Smoking Area"></option>
+                        <option value="Terrace"></option>
+                    </datalist>
 
-                    <label  class="opt">Regions</label><br>
-                    <input type="radio" id="TLV" name="Region" >
-                    <label for="TLV">Tel Aviv</label><br>
-                    <input type="radio" id="BSH" name="Region" >
-                    <label for="BSH">Beer Sheva</label><br>
-                    <input type="radio" id="JLM" name="Region" >
-                    <label for="JLM">Jerusalem</label><br>
-                    <input type="radio" id="HFA" name="Region" >
-                    <label for="HFA">Haifa</label><br><br>
+                    <label  class="opt" for="regions">Regions</label><br>
+                    <input list="regions" name="regions"><br><br>
+                    <datalist id="regions">
+                        <option value="Tel Aviv"></option>
+                        <option value="Beer Sheva"></option>
+                        <option value="Jerusalem"></option>
+                        <option value="Haifa"></option>
+                    </datalist>
 
-                    <label class="opt">Cuisine</label><br>
-                    <input type="radio" id="Italian" name="CSN" >
-                    <label for="Italian">Italian</label><br>
-                    <input type="radio" id="European" name="CSN" >
-                    <label for="European">European</label><br>
-                    <input type="radio" id="Fusion" name="CSN" >
-                    <label for="Fusion">Fusion</label><br>
-                    <input type="radio" id="Israeli" name="CSN" >
-                    <label for="Israeli">Israeli</label><br>
-                    <input type="radio" id="Mediterranean" name="CSN" >
-                    <label for="Mediterranean">Mediterranean</label><br>
-                    <input type="radio" id="Middle_Eastern" name="CSN" >
-                    <label for="Middle_Eastern">Middle Eastern</label><br>
-                    <input type="radio" id="Thai" name="CSN" >
-                    <label for="Thai">Thai</label><br>
-                    <input type="radio" id="Asian" name="CSN" >
-                    <label for="Asian">Asian</label><br><br>
+                    <label class="opt" for="cuisine">Cuisine</label><br>
+                    <input list="cuisine" name="cuisine"><br><br>
+                    <datalist id="cuisine">
+                        <option value="Italian"></option>
+                        <option value="European"></option>
+                        <option value="Fusion"></option>
+                        <option value="Israeli"></option>
+                        <option value="Mediterranean"></option>
+                        <option value="Middle Eastern"></option>
+                        <option value="Thai"></option>
+                        <option value="Asian"></option>
+                    </datalist>
 
-                    <label class="opt">Rating</label><br>
-                    <input type="radio" id="3.5" name="RTG" >
-                    <label for="3.5">3.5 and over</label><br>
-                    <input type="radio" id="4.0" name="RTG" >
-                    <label for="4.0">4.0 and over</label><br>
-                    <input type="radio" id="4.5" name="RTG" >
-                    <label for="4.5">4.5 and over</label><br><br>
+                    <label class="opt" for="rating">Rating</label><br>
+                    <input list="rating" name="rating"><br><br>
+                    <datalist id="rating">
+                        <option value="3.5"></option>
+                        <option value="4.0"></option>
+                        <option value="4.5"></option>
+                    </datalist>
+
                     <input type="hidden" name="tables" value={{ tables }}>
                     <a>
                         <button class="website_button" id="FilterBTN" type="submit" >Filter results</button>
                     </a>
+{#                    <input type="radio" id="Bar" name="Soption" >#}
+{#                    <label for="Bar">Bar</label><br>#}
+{#                    <input type="radio" id="Inside" name="Soption" >#}
+{#                    <label for="Inside">Inside</label><br>#}
+{#                    <input type="radio" id="Salon" name="Soption" >#}
+{#                    <label for="Salon">Salon</label><br>#}
+{#                    <input type="radio" id="Smoking_area" name="Soption" >#}
+{#                    <label for="Smoking_area">Smoking Area</label><br>#}
+{#                    <input type="radio" id="Terrace" name="Soption" >#}
+{#                    <label for="Terrace">Terrace</label><br><br>#}
+{#                    <input type="radio" id="TLV" name="Region" >#}
+{#                    <label for="TLV">Tel Aviv</label><br>#}
+{#                    <input type="radio" id="BSH" name="Region" >#}
+{#                    <label for="BSH">Beer Sheva</label><br>#}
+{#                    <input type="radio" id="JLM" name="Region" >#}
+{#                    <label for="JLM">Jerusalem</label><br>#}
+{#                    <input type="radio" id="HFA" name="Region" >#}
+{#                    <label for="HFA">Haifa</label><br><br>#}
+{#                    <input type="radio" id="Italian" name="CSN" >#}
+{#                    <label for="Italian">Italian</label><br>#}
+{#                    <input type="radio" id="European" name="CSN" >#}
+{#                    <label for="European">European</label><br>#}
+{#                    <input type="radio" id="Fusion" name="CSN" >#}
+{#                    <label for="Fusion">Fusion</label><br>#}
+{#                    <input type="radio" id="Israeli" name="CSN" >#}
+{#                    <label for="Israeli">Israeli</label><br>#}
+{#                    <input type="radio" id="Mediterranean" name="CSN" >#}
+{#                    <label for="Mediterranean">Mediterranean</label><br>#}
+{#                    <input type="radio" id="Middle_Eastern" name="CSN" >#}
+{#                    <label for="Middle_Eastern">Middle Eastern</label><br>#}
+{#                    <input type="radio" id="Thai" name="CSN" >#}
+{#                    <label for="Thai">Thai</label><br>#}
+{#                    <input type="radio" id="Asian" name="CSN" >#}
+{#                    <label for="Asian">Asian</label><br><br>#}
+{#                    <input type="radio" id="3.5" name="RTG" >#}
+{#                    <label for="3.5">3.5 and over</label><br>#}
+{#                    <input type="radio" id="4.0" name="RTG" >#}
+{#                    <label for="4.0">4.0 and over</label><br>#}
+{#                    <input type="radio" id="4.5" name="RTG" >#}
+{#                    <label for="4.5">4.5 and over</label><br><br>#}
                 </form>
             </div>
         </div>
