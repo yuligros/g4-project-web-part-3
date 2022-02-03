@@ -19,9 +19,9 @@ def index():
         for table in tables:
             if table[9] == seating_opt and table[2] == cuisine and table[3] >= rating:
                 tables_after_filters.append(table)
-
-        print(tables_after_filters)
-        return  render_template('SearchResults.html', tables_after_filters = tables_after_filters)
+        if tables_after_filters:
+            return  render_template('SearchResults.html', tables_after_filters = tables_after_filters)
+        else:
+            return render_template('SearchResults.html', filter_message="Please accept our apologies, but there are no restaurants that meet your filter criteria")
     else:
         return render_template('SearchResults.html')
-

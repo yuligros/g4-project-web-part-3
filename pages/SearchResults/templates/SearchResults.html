@@ -51,20 +51,16 @@
 
         <div class="col-7">
 
-            {% if tables_after_filters %}
-
-            {% endif %}
-
-            <form action="" class="main">
-                <div class="wrap">
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Search for a restaurant">
-                        <button type="submit" class="searchButton">
-                            Search
-                        </button>
-                    </div>
-                </div><br>
-            </form>
+{#            <form action="" class="main">#}
+{#                <div class="wrap">#}
+{#                    <div class="search">#}
+{#                        <input type="text" class="searchTerm" placeholder="Search for a restaurant">#}
+{#                        <button type="submit" class="searchButton">#}
+{#                            Search#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div><br>#}
+{#            </form>#}
 
             {% if message %}
                       <div class="message">
@@ -89,8 +85,9 @@
                            <div class="col-6">
                                <div class="text">
                                    <h1>{{table.restaurants_name}}</h1>
+                                   <h4>{{ table.city}}</h4>
                                    <p>
-                                      City: {{ table.city}} &#9679 Rate: {{table.rating}} &#9679 Table: {{table.type}}
+                                      Cuisine: {{ table.cuisine}} &#9679 Rate: {{table.rating}} &#9679 Table: {{table.type}}
                                    </p>
                                    <form action="/credit_card" method="POST">
                                         <input type="hidden" name="table_ID" value={{ table.table_ID }}>
@@ -112,6 +109,53 @@
                             </div><br><br>
                         </div>
                     {% endfor %}
+            {% endif %}
+
+            {% if tables_after_filters %}
+                {% for new_table in tables_after_filters %}
+                        <div class="resturant">
+                           <div class="col-3">
+                               <div class="images">
+                                   <img src="{{  url_for('SearchResults.static', filename='media/'+new_table[6] ) }}" style="width: 60%;">
+                               </div>
+                           </div>
+
+                           <div class="col-6">
+                               <div class="text">
+                                   <h1>{{new_table[1]}}</h1>
+                                   <h4>{{ new_table[0]}}</h4>
+                                   <p>
+                                      Cuisine: {{ new_table[2]}} &#9679 Rate: {{new_table[3]}} &#9679 Table: {{new_table[9]}}
+                                   </p>
+                                   <form action="/credit_card" method="POST">
+                                        <input type="hidden" name="table_ID" value={{ new_table[7] }}>
+                                        <input type="hidden" name="number_of_diners" value={{ new_table[8] }}>
+                                        <a href="/credit_card"><button type="submit">Book</button></a>
+                                   </form>
+                               </div>
+                           </div>
+
+                           <div class="col-3">
+                                <div class="contact">
+                                    <h3>Contact</h3>
+                                    <div class="contactPhone">
+                                        <img src="{{  url_for('SearchResults.static', filename='media/phone.PNG') }}" style="width: 20%;"><br><br>
+                                        <h4>{{ new_table[5] }}</h4>
+                                    </div>
+                                    <a href={{ new_table[4] }} class="website_button">Website</a>
+                                </div>
+                            </div><br><br>
+                        </div>
+                    {% endfor %}
+            {% endif %}
+            {% if filter_message %}
+                      <div class="message">
+                          {{ filter_message }}
+                      </div>
+                      <br><br><br>
+                      <div class="col-1"></div>
+                      <a href="/"> <button class="button1" type="button" >Return to the main search page</button></a>
+                      <div class="col-1"></div>
             {% endif %}
 
         </div>
