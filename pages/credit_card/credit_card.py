@@ -4,7 +4,7 @@ import datetime
 import time
 from datetime import date
 
-# creditcard  blueprint definition
+# credit_card  blueprint definition
 credit_card = Blueprint('credit_card', __name__, static_folder='static', static_url_path='/credit_card', template_folder='templates')
 
 

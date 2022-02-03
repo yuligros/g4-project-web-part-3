@@ -1,4 +1,4 @@
-/*---sign-----*/
+/*---sign up -----*/
 
 .title1 {
     text-align: center;
@@ -9,23 +9,21 @@
     font-size: 30px;
 }
 
-/* Bordered form */
 form {
     border: 3px solid #f1f1f1;
     direction: rtl;
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
+input {
     width: 40%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus , input[type=email]:focus{
     outline: none;
 }
 
@@ -34,7 +32,6 @@ input[type=text]:focus, input[type=password]:focus {
     text-align: center;
     border: 17px solid #9c7c81;
 }
-
 
 .button1 {
     width: 60%;
@@ -69,7 +66,4 @@ input[type=text]:focus, input[type=password]:focus {
 
 }
 
-.message{
-    font-size: 30px;
-    color: maroon;
-}
+

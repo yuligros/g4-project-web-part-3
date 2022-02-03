@@ -44,7 +44,7 @@ from pages.logout.logout import logout
 app.register_blueprint(logout)
 
 ## Credit curd
-from pages.creditcard.credit_card import credit_card
+from pages.credit_card.credit_card import credit_card
 app.register_blueprint(credit_card)
 
 
