@@ -10,16 +10,16 @@ def index():
 
     if request.method == 'POST':
 
-        Soption = request.values.get('Soption')
-        Region = request.values.get('Region')
-        CSN = request.values.get('CSN')
-        RTG = request.values.get('RTG')
+        seating_opt = request.values.get('seating_opt')
+        regions = request.values.get('regions')
+        cuisine = request.values.get('cuisine')
+        rating = request.values.get('rating')
         tables = request.values.get('tables')
 
-        print(Soption)
-        print(Region)
-        print(CSN)
-        print(RTG)
+        print(seating_opt)
+        print(regions)
+        print(cuisine)
+        print(rating)
         print(tables)
 
         return render_template('SearchResults.html')
