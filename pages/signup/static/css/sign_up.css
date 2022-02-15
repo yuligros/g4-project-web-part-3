@@ -67,3 +67,85 @@ input[type=text]:focus, input[type=password]:focus , input[type=email]:focus{
 }
 
 
+.title1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.labels{
+    font-size: 30px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+    direction: rtl;
+}
+
+input {
+    width: 40%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border: 2px solid #ccc;
+}
+
+input[type=text]:focus, input[type=password]:focus , input[type=email]:focus{
+    outline: none;
+}
+
+#main_search{
+    color: gray;
+    text-align: center;
+    border: 17px solid #9c7c81;
+}
+
+.button1 {
+    width: 60%;
+    font-size: 30px;
+    color: #f1f1f1;
+    background-color: #9c7c81;
+    border: none;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #E2DAD5;
+    color: #48422a;
+}
+
+.resbar {
+    width: 80%;
+    opacity: 0.5;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  opacity: 0.9
+}
+
+.contact {
+    text-decoration: none;
+    color: black;
+
+}
+
+small {
+                display: block;
+            }
+
+.form-field.error input {
+                border-color: #dc3545;
+            }
+
+.form-field.success input {
+                border-color: #28a745;
+            }
+
+
+.form-field small {
+                color: #dc3545;
+            }

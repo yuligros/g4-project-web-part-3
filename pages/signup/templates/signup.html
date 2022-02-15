@@ -4,6 +4,7 @@
 
 {% block page_head_css %}
     <link rel="stylesheet" href="{{ url_for('signup.static', filename='css/sign_up.css') }}"/>
+
 {% endblock %}
 
 {% block page_body_main_content %}
@@ -14,50 +15,52 @@
                 <img src="{{ url_for('signup.static', filename='media/wine.PNG') }}" class="center" ><br>
                 <img src="{{ url_for('signup.static', filename='media/food.PNG') }}" class="center" ><br>
                 <img src="{{ url_for('signup.static', filename='media/left1.PNG') }}" class="center"><br>
-
         </div>
 
         <div class="col-4" id = "main_search">
+                <form id="signup" action="/signup" method="POST" style="border: none" id="form">
+                <h2 class="title1">Join SitMe</h2>
+                <div class="form-field">
+                     <label for="email" class="labels">Email</label><br/>
+                     <input type="email" placeholder="Select email address" id="email" name="email" autocomplete="off"/><small></small>
+                </div><br/>
 
-                   <form action="/signup" method="POST" style="border:none" id = "form">
+                 <div class="form-field">
+                     <label for="password" class="labels">Password</label><br/>
+                     <input type="password" placeholder="Select a password" id="password" name="password" autocomplete="off"/><small></small>
+                 </div ><br/>
 
-                            <h2 class="title1">Join SitMe</h2>
+                 <div class="form-field">
+                      <input type="password" placeholder="Confirm password" id="confirm-password" name="confirm-password" autocomplete="off"/><small></small>
+                 </div><br/>
 
-                            <label for="email" class="labels">Email</label>
-                            <br>
-                            <input type="email" placeholder="your email address" id="email" name="email" required>
-                            <br>
+                <div class="form-field">
+                     <label for="fullname" class="labels">Full name</label><br />
+                     <input type="text" placeholder="Insert full name" id="fullname" name="fullname" autocomplete="off"/><small></small>
+                </div><br/>
 
-                            <label for="password" class="labels">Password</label>
-                            <br>
+                <div class="form-field">
+                       <label class="labels">Phone number</label><br />
+                       <input type="text" id="phonenumber" name="phonenumber" placeholder="Insert Phone Number" autocomplete="off"/><small></small>
+                </div>
 
-                            <input type="password" placeholder="Select a password" id="password" minlength="3" required name="password" required>
-                            <br>
-                            <input type="password" placeholder="Confirm password" id="pssword_repeat"  minlength="3" required>
-                            <br>
+               <label>Remember me</label><br>
+               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
 
-                            <label for="name" class="labels">Full name</label><br>
-                            <input type="text" placeholder="Insert full name" id="name" required name="full_name">
-                            <br>
+                <p>
+                I agree to SitMe privacy policy and terms of service <br /><a
+                href="/terms"
+                style="color: dodgerblue"
+                >Terms & Privacy</a
+                >
+                </p><br/>
 
-                            <label class="labels">Phone number</label>
-                            <br>
-                           <input type="text" id="phone" name="phone" onkeypress="phoneno()" maxlength="10" placeholder="Insert Phone Number" required>
-                            <br>
+               <div class="clearfix">
+                  <button class="button1" type="submit" class="signupbtn">Sign up</button>
+               </div><br/>
 
-                            <label>Remember me</label><br>
-                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-
-                            <p>I agree to SitMe privacy policy and terms of service <br><a href="/terms" style="color:dodgerblue">Terms & Privacy</a></p>
-                            <br>
-
-                            <div class="clearfix">
-                                <button class="button1" type="submit" class="signupbtn">Sign up</button>
-                            </div>
-                            <br>
-            </form>
-        </div>
-
+               </form>
+          </div>
 
           <div class="col-4" id = right_photos>
                 <img src="{{ url_for('signup.static', filename='media/beit_kandinof.PNG') }}" class="center" ><br>
@@ -66,6 +69,16 @@
                 <img src="{{ url_for('signup.static', filename='media/left1.PNG') }}" class="center"><br>
           </div>
    </div>
-<script src="{{ url_for('signup.static', filename='js/signup.js') }}"></script>
+
 {% endblock %}
 {% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+        <script src="{{ url_for('signup.static', filename='js/signup.js')}}"></script>
+
+{% endblock %}
+
+
+
+
+
